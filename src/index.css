@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-feature-settings: "ss01", "ss02", "cv02";
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-surface-subtle font-body text-ink antialiased transition-colors duration-300 ease-out;
+  }
+
+  .dark body {
+    @apply bg-surface-base text-ink-inverted;
+  }
+}
+
+@layer utilities {
+  .bg-dotted {
+    background-image: radial-gradient(rgba(148, 163, 184, 0.35) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+
+  .dark .bg-dotted {
+    background-image: radial-gradient(rgba(71, 85, 105, 0.35) 1px, transparent 0);
+  }
+
+  .mask-fade-bottom {
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 55%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 55%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}

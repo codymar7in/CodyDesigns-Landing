@@ -1,6 +1,77 @@
 import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
 
+type PortfolioItem = {
+  id: number;
+  businessName: string;
+  location: string;
+  industry: string;
+  industryColor: string;
+  description: string;
+  metric: string;
+  features: string[];
+  gradientFrom: string;
+  gradientVia: string;
+  gradientTo: string;
+  darkGradientFrom: string;
+  darkGradientVia: string;
+  darkGradientTo: string;
+};
+
+const portfolioItems: PortfolioItem[] = [
+  {
+    id: 1,
+    businessName: "Mountain Peak Diner",
+    location: "Bozeman, MT",
+    industry: "Restaurant",
+    industryColor: "bg-blue-600",
+    description:
+      "A modern, mobile-friendly website with online menu, reservation system, and stunning photo galleries that transformed their online presence.",
+    metric: "↑ 45% online orders",
+    features: ["Online Menu", "Reservations", "Photo Gallery", "Mobile-First"],
+    gradientFrom: "from-blue-600",
+    gradientVia: "via-blue-500",
+    gradientTo: "to-indigo-600",
+    darkGradientFrom: "dark:from-blue-900",
+    darkGradientVia: "dark:via-indigo-800",
+    darkGradientTo: "dark:to-slate-900",
+  },
+  {
+    id: 2,
+    businessName: "Big Sky Outfitters",
+    location: "Missoula, MT",
+    industry: "Retail",
+    industryColor: "bg-indigo-600",
+    description:
+      "Fast-loading e-commerce site with product catalog, seamless checkout, and beautiful product photography that showcases their inventory.",
+    metric: "↑ 60% website traffic",
+    features: ["E-Commerce", "Product Catalog", "Fast Checkout", "SEO Optimized"],
+    gradientFrom: "from-indigo-600",
+    gradientVia: "via-indigo-500",
+    gradientTo: "to-slate-700",
+    darkGradientFrom: "dark:from-indigo-900",
+    darkGradientVia: "dark:via-slate-800",
+    darkGradientTo: "dark:to-slate-950",
+  },
+  {
+    id: 3,
+    businessName: "Montana Home Services",
+    location: "Billings, MT",
+    industry: "Services",
+    industryColor: "bg-slate-700",
+    description:
+      "Clean, professional website with service listings, customer testimonials, and easy contact forms that builds trust and credibility.",
+    metric: "↑ 35% lead inquiries",
+    features: ["Service Listings", "Testimonials", "Contact Forms", "Trust Building"],
+    gradientFrom: "from-slate-700",
+    gradientVia: "via-blue-600",
+    gradientTo: "to-indigo-700",
+    darkGradientFrom: "dark:from-slate-800",
+    darkGradientVia: "dark:via-blue-900",
+    darkGradientTo: "dark:to-indigo-950",
+  },
+];
+
 const THEME_STORAGE_KEY = "codydesigns-theme";
 const INPUT_BASE_CLASSES =
   "rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-normal text-ink placeholder:text-slate-400 shadow-sm transition focus:outline-none focus:ring-2 focus:ring-brand-light focus:ring-offset-2 focus:ring-offset-white dark:border-surface-outline dark:bg-surface-elevated/80 dark:text-ink-inverted dark:placeholder:text-ink-accent/70 dark:focus:ring-offset-surface-base";
@@ -20,7 +91,7 @@ function App() {
     if (stored === "light") return false;
     return window.matchMedia("(prefers-color-scheme: dark)").matches;
   });
-  const [activeSection, setActiveSection] = useState<"services" | "packages" | "contact">("services");
+  const [activeSection, setActiveSection] = useState<"services" | "packages" | "portfolio" | "contact">("services");
   const [formStatus, setFormStatus] = useState<"idle" | "success" | "error">("idle");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [fieldErrors, setFieldErrors] = useState({
@@ -32,6 +103,7 @@ function App() {
   const navItems = [
     { id: "services", label: "Services", href: "#services" },
     { id: "packages", label: "Packages", href: "#packages" },
+    { id: "portfolio", label: "Portfolio", href: "#portfolio" },
     { id: "contact", label: "Contact", href: "#contact" },
   ] as const;
 
@@ -66,7 +138,7 @@ function App() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    const sectionIds: Array<"services" | "packages" | "contact"> = ["services", "packages", "contact"];
+    const sectionIds: Array<"services" | "packages" | "portfolio" | "contact"> = ["services", "packages", "portfolio", "contact"];
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries
@@ -441,6 +513,113 @@ function App() {
                     </ul>
                   </div>
                 </div>
+              </div>
+            </section>
+
+            <section id="portfolio" className="space-y-10">
+              <div className="text-center space-y-4">
+                <span className="text-xs font-semibold uppercase tracking-[0.32em] text-slate-400 dark:text-ink-accent/80">
+                  Portfolio
+                </span>
+                <h2 className="text-3xl font-semibold text-ink dark:text-ink-inverted sm:text-4xl">
+                  Stunning websites that drive results
+                </h2>
+                <p className="mx-auto max-w-2xl text-base text-ink-soft dark:text-ink-accent">
+                  See how we&apos;ve helped Montana businesses modernize their online presence 
+                  with fast, beautiful websites that bring in customers.
+                </p>
+              </div>
+              <div className="grid gap-6 md:grid-cols-3">
+                {portfolioItems.map((item) => (
+                  <article
+                    key={item.id}
+                    className="group relative overflow-hidden rounded-[32px] border border-white/60 bg-white/45 shadow-card backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:border-surface-outline/60 dark:bg-surface-elevated/45 dark:shadow-card-dark dark:hover:shadow-card-dark"
+                    aria-label={`${item.businessName} - ${item.industry} website portfolio item`}
+                  >
+                    <div
+                      className={`relative flex h-full min-h-[480px] flex-col overflow-hidden bg-gradient-to-br ${item.gradientFrom} ${item.gradientVia} ${item.gradientTo} ${item.darkGradientFrom} ${item.darkGradientVia} ${item.darkGradientTo} p-8 text-white transition-transform duration-500 group-hover:scale-[1.02]`}
+                    >
+                      <div className="absolute inset-0 bg-black/10 dark:bg-black/20" />
+                      <div className="relative z-10 flex h-full flex-col">
+                        <div className="mb-6 flex items-start justify-between">
+                          <span
+                            className={`inline-flex items-center rounded-full ${item.industryColor} px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-lg`}
+                          >
+                            {item.industry}
+                          </span>
+                          <span className="rounded-full bg-white/20 px-3 py-1.5 text-xs font-bold backdrop-blur-sm">
+                            {item.metric}
+                          </span>
+                        </div>
+                        <div className="mb-6 flex-1 space-y-3">
+                          <div>
+                            <h3 className="text-2xl font-bold leading-tight">
+                              {item.businessName}
+                            </h3>
+                            <p className="mt-1 text-sm font-medium text-white/80">
+                              {item.location}
+                            </p>
+                          </div>
+                          <p className="text-sm leading-relaxed text-white/90">
+                            {item.description}
+                          </p>
+                        </div>
+                        <div className="space-y-3 border-t border-white/20 pt-4">
+                          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
+                            Key Features
+                          </p>
+                          <ul className="grid grid-cols-2 gap-2">
+                            {item.features.map((feature, index) => (
+                              <li
+                                key={index}
+                                className="flex items-center gap-2 text-xs font-medium text-white/90"
+                              >
+                                <svg
+                                  className="h-3.5 w-3.5 flex-shrink-0 text-white/80"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                  strokeWidth={2.5}
+                                  aria-hidden="true"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M5 13l4 4L19 7"
+                                  />
+                                </svg>
+                                <span>{feature}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="mt-6 flex items-center justify-between border-t border-white/20 pt-4">
+                          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
+                            View Website
+                          </span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+                            aria-hidden="true"
+                            focusable="false"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-white/10 blur-2xl transition-opacity duration-500 group-hover:opacity-50" />
+                      <div className="absolute -bottom-8 -left-8 h-24 w-24 rounded-full bg-white/10 blur-xl transition-opacity duration-500 group-hover:opacity-50" />
+                    </div>
+                  </article>
+                ))}
               </div>
             </section>
 

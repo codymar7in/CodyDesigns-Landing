@@ -347,276 +347,356 @@ function App() {
               </div>
             </section>
 
-            <section id="packages" className="space-y-10">
-              <div className="text-center space-y-4">
-                <span className="text-xs font-semibold uppercase tracking-[0.32em] text-slate-400 dark:text-ink-accent/80">
+            <section id="packages" className="space-y-12">
+              <div className="text-center space-y-5">
+                <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-50 to-indigo-50 px-5 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-blue-600 shadow-sm dark:from-blue-950/30 dark:to-indigo-950/30 dark:text-blue-400">
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
                   Website Packages
                 </span>
-                <h2 className="text-3xl font-semibold text-ink dark:text-ink-inverted sm:text-4xl">
-                  Choose the perfect package for your business
+                <h2 className="text-4xl font-bold tracking-tight text-ink dark:text-ink-inverted sm:text-5xl">
+                  Choose the perfect package
+                  <span className="block mt-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-slate-700 bg-clip-text text-transparent dark:from-blue-400 dark:via-indigo-400 dark:to-slate-300">
+                    for your business
+                  </span>
                 </h2>
-                <p className="mx-auto max-w-2xl text-base text-ink-soft dark:text-ink-accent">
+                <p className="mx-auto max-w-2xl text-lg text-ink-soft dark:text-ink-accent">
                   All packages include fast, AI-powered websites that are mobile-friendly, 
                   SEO-optimized, and designed to bring in customers.
                 </p>
               </div>
-              <div className="grid gap-6 md:grid-cols-3">
-                <div className="rounded-[32px] border border-white/80 bg-white/85 p-8 shadow-card backdrop-blur-lg dark:border-surface-outline dark:bg-surface-elevated/70 dark:shadow-card-dark">
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <h3 className="text-2xl font-semibold text-ink dark:text-ink-inverted">Basic</h3>
-                      <span className="text-3xl font-bold text-ink dark:text-ink-inverted">$300</span>
+              <div className="grid gap-8 md:grid-cols-3">
+                <div className="group relative rounded-[32px] border border-slate-200/80 bg-gradient-to-br from-white to-slate-50/50 p-8 shadow-lg shadow-slate-200/50 backdrop-blur-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 dark:border-surface-outline/60 dark:from-surface-elevated/90 dark:to-surface-muted/50 dark:shadow-card-dark dark:hover:shadow-blue-500/20">
+                  <div className="absolute inset-0 rounded-[32px] bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="relative space-y-6">
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-lg shadow-blue-500/30">
+                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-ink dark:text-ink-inverted">Basic</h3>
+                        <div className="mt-1">
+                          <span className="text-3xl font-bold text-ink dark:text-ink-inverted">$300</span>
+                          <span className="text-sm font-medium text-ink-muted dark:text-ink-accent/70">/one-time</span>
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-sm text-ink-soft dark:text-ink-accent">
+                    <p className="text-sm font-medium text-ink-soft dark:text-ink-accent leading-relaxed">
                       Perfect for small businesses getting started online
                     </p>
-                    <ul className="space-y-3 text-sm text-ink-soft dark:text-ink-accent">
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <ul className="space-y-3.5 text-sm text-ink-soft dark:text-ink-accent">
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Up to 5 pages</span>
+                        <span className="font-medium">Up to 5 pages</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Mobile-responsive design</span>
+                        <span className="font-medium">Mobile-responsive design</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Contact form</span>
+                        <span className="font-medium">Contact form</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Basic SEO optimization</span>
+                        <span className="font-medium">Basic SEO optimization</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Fast loading times</span>
+                        <span className="font-medium">Fast loading times</span>
                       </li>
                     </ul>
+                    <a
+                      href="#contact"
+                      className="mt-8 block w-full rounded-xl bg-gradient-to-r from-blue-500 to-indigo-600 px-6 py-3 text-center text-sm font-semibold text-white shadow-md shadow-blue-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/40 hover:-translate-y-0.5 dark:shadow-blue-500/20"
+                    >
+                      Get Started
+                    </a>
                   </div>
                 </div>
-                <div className="rounded-[32px] border-2 border-blue-500 bg-white/90 p-8 shadow-card backdrop-blur-lg dark:border-brand-light dark:bg-surface-elevated/80 dark:shadow-card-dark relative">
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="inline-flex items-center rounded-full bg-blue-500 px-4 py-1 text-xs font-semibold text-white">
+                <div className="group relative rounded-[32px] border-2 border-blue-500 bg-gradient-to-br from-blue-50 via-white to-indigo-50/50 p-8 shadow-xl shadow-blue-500/20 backdrop-blur-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/30 dark:border-blue-400 dark:from-blue-950/40 dark:via-surface-elevated/90 dark:to-indigo-950/40 dark:shadow-blue-500/30 dark:hover:shadow-blue-500/40">
+                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-10">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg shadow-blue-500/40 dark:from-blue-400 dark:to-indigo-500">
+                      <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
                       Most Popular
                     </span>
                   </div>
-                  <div className="space-y-4 pt-4">
-                    <div className="flex items-center justify-between">
-                      <h3 className="text-2xl font-semibold text-ink dark:text-ink-inverted">Pro</h3>
-                      <span className="text-3xl font-bold text-ink dark:text-ink-inverted">$750</span>
+                  <div className="absolute inset-0 rounded-[32px] bg-gradient-to-br from-blue-500/10 via-transparent to-indigo-500/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="relative space-y-6 pt-2">
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/40">
+                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-ink dark:text-ink-inverted">Pro</h3>
+                        <div className="mt-1">
+                          <span className="text-3xl font-bold text-ink dark:text-ink-inverted">$750</span>
+                          <span className="text-sm font-medium text-ink-muted dark:text-ink-accent/70">/one-time</span>
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-sm text-ink-soft dark:text-ink-accent">
+                    <p className="text-sm font-medium text-ink-soft dark:text-ink-accent leading-relaxed">
                       Best for growing businesses that need more features
                     </p>
-                    <ul className="space-y-3 text-sm text-ink-soft dark:text-ink-accent">
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <ul className="space-y-3.5 text-sm text-ink-soft dark:text-ink-accent">
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Up to 10 pages</span>
+                        <span className="font-medium">Up to 10 pages</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Everything in Basic</span>
+                        <span className="font-medium">Everything in Basic</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Online booking/scheduling</span>
+                        <span className="font-medium">Online booking/scheduling</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Image gallery</span>
+                        <span className="font-medium">Image gallery</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Advanced SEO optimization</span>
+                        <span className="font-medium">Advanced SEO optimization</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Social media integration</span>
+                        <span className="font-medium">Social media integration</span>
                       </li>
                     </ul>
+                    <a
+                      href="#contact"
+                      className="mt-8 block w-full rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 text-center text-sm font-semibold text-white shadow-lg shadow-blue-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/50 hover:-translate-y-0.5 dark:shadow-blue-500/30"
+                    >
+                      Get Started
+                    </a>
                   </div>
                 </div>
-                <div className="rounded-[32px] border border-white/80 bg-white/85 p-8 shadow-card backdrop-blur-lg dark:border-surface-outline dark:bg-surface-elevated/70 dark:shadow-card-dark">
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between">
-                      <h3 className="text-2xl font-semibold text-ink dark:text-ink-inverted">Advanced</h3>
-                      <span className="text-3xl font-bold text-ink dark:text-ink-inverted">$1,500</span>
+                <div className="group relative rounded-[32px] border border-slate-200/80 bg-gradient-to-br from-slate-50/50 via-white to-indigo-50/30 p-8 shadow-lg shadow-slate-200/50 backdrop-blur-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/10 dark:border-surface-outline/60 dark:from-surface-muted/50 dark:via-surface-elevated/90 dark:to-indigo-950/30 dark:shadow-card-dark dark:hover:shadow-indigo-500/20">
+                  <div className="absolute inset-0 rounded-[32px] bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <div className="relative space-y-6">
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-slate-700 text-white shadow-lg shadow-indigo-500/30">
+                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-ink dark:text-ink-inverted">Advanced</h3>
+                        <div className="mt-1">
+                          <span className="text-3xl font-bold text-ink dark:text-ink-inverted">$1,500</span>
+                          <span className="text-sm font-medium text-ink-muted dark:text-ink-accent/70">/one-time</span>
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-sm text-ink-soft dark:text-ink-accent">
+                    <p className="text-sm font-medium text-ink-soft dark:text-ink-accent leading-relaxed">
                       For businesses ready to scale with e-commerce and custom features
                     </p>
-                    <ul className="space-y-3 text-sm text-ink-soft dark:text-ink-accent">
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <ul className="space-y-3.5 text-sm text-ink-soft dark:text-ink-accent">
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Unlimited pages</span>
+                        <span className="font-medium">Unlimited pages</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Everything in Pro</span>
+                        <span className="font-medium">Everything in Pro</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>E-commerce/online store</span>
+                        <span className="font-medium">E-commerce/online store</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Custom functionality</span>
+                        <span className="font-medium">Custom functionality</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Payment processing</span>
+                        <span className="font-medium">Payment processing</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Customer portal/login</span>
+                        <span className="font-medium">Customer portal/login</span>
                       </li>
-                      <li className="flex items-start gap-2">
-                        <svg className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <li className="flex items-start gap-3">
+                        <svg className="h-5 w-5 text-indigo-600 dark:text-indigo-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Priority support</span>
+                        <span className="font-medium">Priority support</span>
                       </li>
                     </ul>
+                    <a
+                      href="#contact"
+                      className="mt-8 block w-full rounded-xl bg-gradient-to-r from-indigo-600 to-slate-700 px-6 py-3 text-center text-sm font-semibold text-white shadow-md shadow-indigo-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/40 hover:-translate-y-0.5 dark:shadow-indigo-500/20"
+                    >
+                      Get Started
+                    </a>
                   </div>
                 </div>
               </div>
             </section>
 
-            <section id="portfolio" className="space-y-10">
-              <div className="text-center space-y-4">
-                <span className="text-xs font-semibold uppercase tracking-[0.32em] text-slate-400 dark:text-ink-accent/80">
+            <section id="portfolio" className="space-y-12">
+              <div className="text-center space-y-5">
+                <span className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-50 to-blue-50 px-5 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-indigo-600 shadow-sm dark:from-indigo-950/30 dark:to-blue-950/30 dark:text-indigo-400">
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
                   Portfolio
                 </span>
-                <h2 className="text-3xl font-semibold text-ink dark:text-ink-inverted sm:text-4xl">
-                  Stunning websites that drive results
+                <h2 className="text-4xl font-bold tracking-tight text-ink dark:text-ink-inverted sm:text-5xl">
+                  Stunning websites that
+                  <span className="block mt-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-slate-700 bg-clip-text text-transparent dark:from-blue-400 dark:via-indigo-400 dark:to-slate-300">
+                    drive results
+                  </span>
                 </h2>
-                <p className="mx-auto max-w-2xl text-base text-ink-soft dark:text-ink-accent">
+                <p className="mx-auto max-w-2xl text-lg text-ink-soft dark:text-ink-accent">
                   See how we&apos;ve helped Montana businesses modernize their online presence 
                   with fast, beautiful websites that bring in customers.
                 </p>
               </div>
-              <div className="grid gap-6 md:grid-cols-3">
+              <div className="grid gap-8 md:grid-cols-3">
                 {portfolioItems.map((item) => (
                   <article
                     key={item.id}
-                    className="group relative overflow-hidden rounded-[32px] border border-white/60 bg-white/45 shadow-card backdrop-blur transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:border-surface-outline/60 dark:bg-surface-elevated/45 dark:shadow-card-dark dark:hover:shadow-card-dark"
+                    className="group relative overflow-hidden rounded-[32px] border border-slate-200/60 bg-white/50 shadow-xl shadow-slate-200/50 backdrop-blur-lg transition-all duration-700 hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-500/20 dark:border-surface-outline/60 dark:bg-surface-elevated/50 dark:shadow-card-dark dark:hover:shadow-blue-500/30"
                     aria-label={`${item.businessName} - ${item.industry} website portfolio item`}
                   >
                     <div
-                      className={`relative flex h-full min-h-[480px] flex-col overflow-hidden bg-gradient-to-br ${item.gradientFrom} ${item.gradientVia} ${item.gradientTo} ${item.darkGradientFrom} ${item.darkGradientVia} ${item.darkGradientTo} p-8 text-white transition-transform duration-500 group-hover:scale-[1.02]`}
+                      className={`relative flex h-full min-h-[520px] flex-col overflow-hidden bg-gradient-to-br ${item.gradientFrom} ${item.gradientVia} ${item.gradientTo} ${item.darkGradientFrom} ${item.darkGradientVia} ${item.darkGradientTo} p-10 text-white transition-all duration-700 group-hover:scale-[1.03]`}
                     >
-                      <div className="absolute inset-0 bg-black/10 dark:bg-black/20" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-black/5 to-transparent dark:from-black/30 dark:via-black/10" />
+                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100" />
                       <div className="relative z-10 flex h-full flex-col">
-                        <div className="mb-6 flex items-start justify-between">
+                        <div className="mb-8 flex items-start justify-between gap-3">
                           <span
-                            className={`inline-flex items-center rounded-full ${item.industryColor} px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-lg`}
+                            className={`inline-flex items-center gap-1.5 rounded-full ${item.industryColor} px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-xl backdrop-blur-sm`}
                           >
+                            <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
                             {item.industry}
                           </span>
-                          <span className="rounded-full bg-white/20 px-3 py-1.5 text-xs font-bold backdrop-blur-sm">
+                          <span className="rounded-full bg-white/25 px-4 py-2 text-xs font-bold backdrop-blur-md shadow-lg border border-white/30">
                             {item.metric}
                           </span>
                         </div>
-                        <div className="mb-6 flex-1 space-y-3">
+                        <div className="mb-8 flex-1 space-y-4">
                           <div>
-                            <h3 className="text-2xl font-bold leading-tight">
+                            <h3 className="text-3xl font-bold leading-tight tracking-tight">
                               {item.businessName}
                             </h3>
-                            <p className="mt-1 text-sm font-medium text-white/80">
+                            <p className="mt-2 flex items-center gap-1.5 text-sm font-semibold text-white/90">
+                              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                              </svg>
                               {item.location}
                             </p>
                           </div>
-                          <p className="text-sm leading-relaxed text-white/90">
+                          <p className="text-base leading-relaxed text-white/95 font-medium">
                             {item.description}
                           </p>
                         </div>
-                        <div className="space-y-3 border-t border-white/20 pt-4">
-                          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
+                        <div className="space-y-4 border-t border-white/30 pt-6">
+                          <p className="text-xs font-bold uppercase tracking-[0.24em] text-white/80">
                             Key Features
                           </p>
-                          <ul className="grid grid-cols-2 gap-2">
+                          <ul className="grid grid-cols-2 gap-3">
                             {item.features.map((feature, index) => (
                               <li
                                 key={index}
-                                className="flex items-center gap-2 text-xs font-medium text-white/90"
+                                className="flex items-center gap-2.5 text-sm font-semibold text-white/95"
                               >
-                                <svg
-                                  className="h-3.5 w-3.5 flex-shrink-0 text-white/80"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
-                                  strokeWidth={2.5}
-                                  aria-hidden="true"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M5 13l4 4L19 7"
-                                  />
-                                </svg>
+                                <div className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
+                                  <svg
+                                    className="h-3 w-3 text-white"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    strokeWidth={3}
+                                    aria-hidden="true"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      d="M5 13l4 4L19 7"
+                                    />
+                                  </svg>
+                                </div>
                                 <span>{feature}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
-                        <div className="mt-6 flex items-center justify-between border-t border-white/20 pt-4">
-                          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
+                        <div className="mt-8 flex items-center justify-between border-t border-white/30 pt-6">
+                          <span className="text-sm font-bold uppercase tracking-[0.2em] text-white/90">
                             View Website
                           </span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth={2}
-                            className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
-                            aria-hidden="true"
-                            focusable="false"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                            />
-                          </svg>
+                          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-md transition-all duration-300 group-hover:bg-white/30 group-hover:scale-110">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth={2.5}
+                              className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+                              aria-hidden="true"
+                              focusable="false"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                              />
+                            </svg>
+                          </div>
                         </div>
                       </div>
-                      <div className="absolute -right-12 -top-12 h-32 w-32 rounded-full bg-white/10 blur-2xl transition-opacity duration-500 group-hover:opacity-50" />
-                      <div className="absolute -bottom-8 -left-8 h-24 w-24 rounded-full bg-white/10 blur-xl transition-opacity duration-500 group-hover:opacity-50" />
+                      <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-white/15 blur-3xl transition-all duration-700 group-hover:opacity-60 group-hover:scale-150" />
+                      <div className="absolute -bottom-12 -left-12 h-32 w-32 rounded-full bg-white/15 blur-2xl transition-all duration-700 group-hover:opacity-60 group-hover:scale-150" />
+                      <div className="absolute top-1/2 right-0 h-24 w-24 rounded-full bg-white/10 blur-xl transition-all duration-700 group-hover:opacity-40 group-hover:translate-x-4" />
                     </div>
                   </article>
                 ))}
@@ -832,3 +912,4 @@ function App() {
 }
 
 export default App;
+

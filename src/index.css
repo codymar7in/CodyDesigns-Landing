@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   :root {
     font-feature-settings: "ss01", "ss02", "cv02";
     font-synthesis: none;
@@ -17,6 +21,19 @@
 
   .dark body {
     @apply bg-surface-base text-ink-inverted;
+  }
+}
+
+@layer components {
+  .skip-link {
+    @apply pointer-events-none absolute left-1/2 top-3 -translate-x-1/2 rounded-full bg-brand px-5 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-white opacity-0 shadow-lg transition duration-200;
+    letter-spacing: 0.18em;
+    z-index: 50;
+  }
+
+  .skip-link:focus-visible {
+    @apply pointer-events-auto translate-y-1 opacity-100 outline-none;
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.35);
   }
 }
 
